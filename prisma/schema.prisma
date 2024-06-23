@@ -6,11 +6,11 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["fullTextIndex","fullTextSearch"]
+  // previewFeatures = ["fullTextIndex","fullTextSearch"]
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
   relationMode = "prisma"
 }
@@ -55,7 +55,7 @@ model Stream {
 
    @@index([userId])
    @@index([ingressId])
-   @@fulltext([name])
+  //  @@fulltext([name])
 }
 
 model Follow{

@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { CheckCheck, Copy } from "lucide-react";
 import { useState } from "react";
 
-interface CopyClientProps {
+interface CopyButtonsProp {
   value?: string;
 }
 
-export const CopyButton = ({ value }: CopyClientProps) => {
+export const CopyButton = ({ value }: CopyButtonsProp) => {
   const [isCopied, setIsCopied] = useState(false);
   const onCopy = () => {
     if (!value) return;

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { CopyButton } from "./copy-button";
 
 interface KeyCardPros {
   value: string | null;
@@ -23,6 +24,7 @@ export const KeyCard = ({ value }: KeyCardPros) => {
             disabled
             placeholder="Stream key"
           />
+          <CopyButton value={value || ""} />
         </div>
         <Button onClick={() => setShow(!show)} size="sm" variant="link">
           {show ? "Hide" : "show"}
