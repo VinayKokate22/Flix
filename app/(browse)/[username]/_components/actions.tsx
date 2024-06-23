@@ -16,14 +16,14 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
   const handleFollow = () => {
     startTransition(() => {
       onFollow(userId).then((data) =>
-        toast.success(`You are now following ${data.following.username}`)
+        toast.success(`You are now following ${data?.following.username}`)
       );
     });
   };
   const handleUnFollow = () => {
     startTransition(() => {
       onUnfollow(userId).then((data) =>
-        toast.success(`You have Unfollowed ${data.following.username}`)
+        toast.success(`You have Unfollowed ${data?.following.username}`)
       );
     });
   };
